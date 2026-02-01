@@ -1,0 +1,260 @@
+/*основные настройки*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3faf5;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+/*самый основной контейнер*/
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/*заголовки*/
+h1 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+h2, h3 {
+    color: #388e3c;
+}
+
+/*кнопки и ссылки*/
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+button:hover {
+    background-color: #43a047;
+}
+
+/* кнопки-ссылки */
+a button {
+    width: 100%;
+}
+
+/*категории*/
+.category-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/*меню*/
+.menu-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 12px;
+}
+
+.menu-item {
+    padding: 10px;
+    border-bottom: 1px solid #c8e6c9;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item input {
+    margin-right: 10px;
+}
+
+/*выбор*/
+select {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #a5d6a7;
+    font-size: 15px;
+}
+
+/*итог*/
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 12px;
+}
+
+.good {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.warning {
+    color: #f9a825;
+    font-weight: bold;
+}
+
+.bad {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/*прочее*/
+hr {
+    margin: 25px 0;
+    border: none;
+    height: 1px;
+    background: #c8e6c9;
+}
+/*страница статы*/
+
+.stats-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.stats-container h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.stats-period {
+    text-align: center;
+    color: #4caf50;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* сетка карточек */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+/* карточка показателя */
+.stat-card {
+    background: #e8f5e9;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    border-left: 6px solid #4caf50;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.stat-card strong {
+    font-size: 22px;
+    color: #2e7d32;
+}
+
+/* количество записей */
+.stats-count {
+    margin-top: 25px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+/* если нет данных */
+.stats-empty {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* кнопка назад */
+.stats-back {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 12px 20px;
+    background: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background 0.25s;
+}
+
+.stats-back:hover {
+    background: #43a047;
+}
+.nav-buttons {
+    margin-top: 30px;
+    display: flex;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: background 0.25s, transform 0.15s;
+}
+
+.nav-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+}
+
+.nav-btn.secondary {
+    background-color: #a5d6a7;
+    color: #2e7d32;
+}
+
+.nav-btn.secondary:hover {
+    background-color: #81c784;
+}
+.category-btn {
+    display: block;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 16px;
+    transition: background 0.25s, transform 0.15s;
+}
+
+.category-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+}
+
+.stats-btn {
+    background-color: #2e7d32;
+}
+
+.stats-btn:hover {
+    background-color: #1b5e20;
+}
+.category-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 25px;
+}

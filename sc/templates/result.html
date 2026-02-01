@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Ваш рацион</h2>
+
+<h3>🍳 Завтрак</h3>
+<ul>
+{% for b in breakfast %}<li>{{ b }}</li>{% endfor %}
+</ul>
+
+<h3>🍲 Обед</h3>
+<ul>
+{% for l in lunch %}<li>{{ l }}</li>{% endfor %}
+</ul>
+
+<hr>
+<h3>Суммарное КБЖУ</h3>
+<p>💰 Стоимость: {{ totals.price }} ₽</p>
+<p>🔥 Калории: {{ totals.calories }} ккал</p>
+<p>🥩 Белки: {{ totals.proteins }} г</p>
+<p>🧈 Жиры: {{ totals.fats }} г</p>
+<p>🍞 Углеводы: {{ totals.carbs }} г</p>
+
+<h3>📊 Процентное соотношение БЖУ</h3>
+<p>🥩 Белки: {{ bju_percent.proteins }}%</p>
+<p>🧈 Жиры: {{ bju_percent.fats }}%</p>
+<p>🍞 Углеводы: {{ bju_percent.carbs }}%</p>
+
+<h3>Тип питания: {{ food_type }}</h3>
+<h3>Оценка рациона ({{ age_group }} лет)</h3>
+<p><b>{{ summary }}</b></p>
+
+{% if food_type == "безмолочное" and milk_violations %}
+<p style="color:red;">
+⚠️ В рационе присутствуют молочные блюда: {{ milk_violations|join(", ") }}
+</p>
+{% endif %}
+<div class="nav-buttons">
+    <a href="/" class="nav-btn secondary">← Назад</a>
+</div>
+</body>
+</html>

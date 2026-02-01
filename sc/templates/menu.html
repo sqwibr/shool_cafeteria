@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Меню ({{ category }})</h2>
+
+<form method="post" action="/result">
+
+<h3>Завтрак</h3>
+{% for dish in dishes %}
+<input type="checkbox" name="breakfast" value="{{ dish[0] }}">
+{{ dish[1] }} — {{ dish[2] }} ₽ | {{ dish[3] }} ккал<br>
+{% endfor %}
+
+<h3>Обед</h3>
+{% for dish in dishes %}
+<input type="checkbox" name="lunch" value="{{ dish[0] }}">
+{{ dish[1] }} — {{ dish[2] }} ₽ | {{ dish[3] }} ккал<br>
+{% endfor %}
+
+<h3>Возрастная группа</h3>
+<select name="age_group" required>
+    <option value="10-12">10–12 лет</option>
+    <option value="13-15">13–15 лет</option>
+    <option value="16-18">16–18 лет</option>
+</select>
+
+<h3>Тип питания</h3>
+<select name="food_type" required>
+    <option value="классическое">Классическое</option>
+    <option value="диетическое">Диетическое</option>
+    <option value="безмолочное">Безмолочное</option>
+    <option value="спортивное">Спортивное</option>
+</select>
+
+<br><br>
+<button type="submit">Рассчитать рацион</button>
+</form>
+<div class="nav-buttons">
+    <a href="/" class="nav-btn secondary">← Назад</a>
+</div>
+</body>
+</html>

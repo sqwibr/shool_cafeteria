@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика питания</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика питания</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="stats-container">
+    <h2>📊 Статистика питания</h2>
+
+    {% if count == 0 %}
+        <p class="stats-empty">Нет данных за последние 7 дней</p>
+    {% else %}
+        <p class="stats-period">Средние показатели за последние 7 дней</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span>🔥 Калории</span>
+                <strong>{{ averages.calories }} ккал</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>🥩 Белки</span>
+                <strong>{{ averages.proteins }} г</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>🧈 Жиры</span>
+                <strong>{{ averages.fats }} г</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>🍞 Углеводы</span>
+                <strong>{{ averages.carbs }} г</strong>
+            </div>
+        </div>
+
+        <p class="stats-count">Учтено рационов: {{ count }}</p>
+    {% endif %}
+
+    <div style="text-align:center;">
+        <a href="/" class="stats-back">← На главную</a>
+    </div>
+</div>
+
+</body>
+</html>
+</body>
+</html>
+</body>
+</html>

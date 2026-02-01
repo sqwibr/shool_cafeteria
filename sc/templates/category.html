@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/set-student">
+    <label>Код ученика:</label>
+    <input type="text" name="student_code" required>
+    <button type="submit">Продолжить</button>
+</form>
+
+<hr>
+<h1>Выберите тип питания</h1>
+
+<div class="category-buttons">
+    {% for cat in categories %}
+        <a href="/menu/{{ cat }}" class="category-btn">
+            {{ cat }}
+        </a>
+    {% endfor %}
+    <a href="/statistics" class="category-btn">
+        📊 Статистика питания
+    </a>
+</div>
+</div>
+</body>
+</html>
